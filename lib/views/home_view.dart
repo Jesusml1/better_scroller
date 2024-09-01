@@ -16,7 +16,7 @@ class HomeView extends ConsumerWidget {
         data: (data) {
           return VideoScroller(videoList: data);
         },
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Container(),
         error: (error, stackTrace) => const Center(
           child: Text("Error fetching videos"),
         ),

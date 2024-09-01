@@ -52,9 +52,9 @@ class _VideoPlayerWidgetState extends ConsumerState<VideoPlayerWidget> {
             ),
           ),
         ),
-        videoPlayerController.value.isBuffering ?
-        const Positioned(child: CircularProgressIndicator())
-        : Container()
+        // videoPlayerController.value.isBuffering ?
+        // const Positioned(child: CircularProgressIndicator())
+        // : Container()
       ]),
     );
   }
