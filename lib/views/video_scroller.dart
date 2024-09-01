@@ -31,9 +31,7 @@ class VideoScroller extends HookConsumerWidget {
       videoPlayerControllersNotifier.resetVideo(currentPageIndex.value);
 
       currentPageIndex.value = newIndex;
-      Future.delayed(const Duration(milliseconds: 500), () {
-        videoPlayerControllersNotifier.playVideo(currentPageIndex.value);
-      });
+      videoPlayerControllersNotifier.playVideo(currentPageIndex.value);
     }
 
     return PageView.builder(
