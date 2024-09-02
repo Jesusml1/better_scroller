@@ -16,6 +16,7 @@ class VideoScroller extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final currentPageIndex = useState(0);
+    final pageController = usePageController();
 
     useEffect(() {
       ref
@@ -36,7 +37,7 @@ class VideoScroller extends HookConsumerWidget {
     }
 
     return PageView.builder(
-      controller: PageController(),
+      controller: pageController,
       physics: const CustomScrollPhysics(speedFactor: 2.0),
       itemCount: videoList.length,
       scrollDirection: Axis.vertical,
