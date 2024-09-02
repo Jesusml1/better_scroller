@@ -11,7 +11,7 @@ class HomeView extends ConsumerWidget {
     final videos = ref.watch(videosProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Better scroller')),
+      // appBar: AppBar(title: const Text('Better scroller')),
       body: videos.when(
         data: (data) {
           return VideoScroller(videoList: data);
